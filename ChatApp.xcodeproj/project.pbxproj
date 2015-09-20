@@ -15,6 +15,19 @@
 		F23EBE941BAEA6AC00F61D85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23EBE921BAEA6AC00F61D85 /* LaunchScreen.storyboard */; };
 		F23EBE9F1BAEA6AC00F61D85 /* ChatAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EBE9E1BAEA6AC00F61D85 /* ChatAppTests.swift */; };
 		F23EBEAA1BAEA6AC00F61D85 /* ChatAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EBEA91BAEA6AC00F61D85 /* ChatAppUITests.swift */; };
+		F23EBEB81BAEABC100F61D85 /* defaultimage.png in Resources */ = {isa = PBXBuildFile; fileRef = F23EBEB71BAEABC100F61D85 /* defaultimage.png */; settings = {ASSET_TAGS = (); }; };
+		F23EBEBF1BAEAD5200F61D85 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23EBEBD1BAEAD5200F61D85 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
+		F23EBEC01BAEAD5200F61D85 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23EBEBE1BAEAD5200F61D85 /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
+		F23EBEC21BAEAD6800F61D85 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23EBEC11BAEAD6800F61D85 /* AudioToolbox.framework */; };
+		F23EBEC41BAEAD7000F61D85 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23EBEC31BAEAD7000F61D85 /* CFNetwork.framework */; };
+		F23EBEC61BAEAD7800F61D85 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23EBEC51BAEAD7800F61D85 /* CoreGraphics.framework */; };
+		F23EBEC81BAEAD8100F61D85 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23EBEC71BAEAD8100F61D85 /* CoreLocation.framework */; };
+		F23EBECA1BAEAD8E00F61D85 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23EBEC91BAEAD8E00F61D85 /* QuartzCore.framework */; };
+		F23EBECC1BAEAD9600F61D85 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23EBECB1BAEAD9600F61D85 /* Security.framework */; };
+		F23EBECE1BAEAD9E00F61D85 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23EBECD1BAEAD9E00F61D85 /* StoreKit.framework */; };
+		F23EBED01BAEADA600F61D85 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23EBECF1BAEADA600F61D85 /* SystemConfiguration.framework */; };
+		F23EBED91BAEAEB700F61D85 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F23EBED81BAEAEB700F61D85 /* libz.1.dylib */; };
+		F23EBEDB1BAEAED000F61D85 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F23EBEDA1BAEAED000F61D85 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +62,20 @@
 		F23EBEA51BAEA6AC00F61D85 /* ChatAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23EBEA91BAEA6AC00F61D85 /* ChatAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppUITests.swift; sourceTree = "<group>"; };
 		F23EBEAB1BAEA6AC00F61D85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F23EBEB71BAEABC100F61D85 /* defaultimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultimage.png; sourceTree = "<group>"; };
+		F23EBEBD1BAEAD5200F61D85 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		F23EBEBE1BAEAD5200F61D85 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		F23EBEC11BAEAD6800F61D85 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F23EBEC31BAEAD7000F61D85 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F23EBEC51BAEAD7800F61D85 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F23EBEC71BAEAD8100F61D85 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F23EBEC91BAEAD8E00F61D85 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F23EBECB1BAEAD9600F61D85 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F23EBECD1BAEAD9E00F61D85 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F23EBECF1BAEADA600F61D85 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F23EBED81BAEAEB700F61D85 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		F23EBEDA1BAEAED000F61D85 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
+		F23EBEDC1BAEAF2C00F61D85 /* ChatApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatApp-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +83,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F23EBEDB1BAEAED000F61D85 /* libsqlite3.dylib in Frameworks */,
+				F23EBED91BAEAEB700F61D85 /* libz.1.dylib in Frameworks */,
+				F23EBED01BAEADA600F61D85 /* SystemConfiguration.framework in Frameworks */,
+				F23EBECE1BAEAD9E00F61D85 /* StoreKit.framework in Frameworks */,
+				F23EBECC1BAEAD9600F61D85 /* Security.framework in Frameworks */,
+				F23EBECA1BAEAD8E00F61D85 /* QuartzCore.framework in Frameworks */,
+				F23EBEC81BAEAD8100F61D85 /* CoreLocation.framework in Frameworks */,
+				F23EBEC61BAEAD7800F61D85 /* CoreGraphics.framework in Frameworks */,
+				F23EBEC41BAEAD7000F61D85 /* CFNetwork.framework in Frameworks */,
+				F23EBEC21BAEAD6800F61D85 /* AudioToolbox.framework in Frameworks */,
+				F23EBEC01BAEAD5200F61D85 /* Parse.framework in Frameworks */,
+				F23EBEBF1BAEAD5200F61D85 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +118,21 @@
 		F23EBE7A1BAEA6AC00F61D85 = {
 			isa = PBXGroup;
 			children = (
+				F23EBEDA1BAEAED000F61D85 /* libsqlite3.dylib */,
+				F23EBED81BAEAEB700F61D85 /* libz.1.dylib */,
+				F23EBECF1BAEADA600F61D85 /* SystemConfiguration.framework */,
+				F23EBECD1BAEAD9E00F61D85 /* StoreKit.framework */,
+				F23EBECB1BAEAD9600F61D85 /* Security.framework */,
+				F23EBEC91BAEAD8E00F61D85 /* QuartzCore.framework */,
+				F23EBEC71BAEAD8100F61D85 /* CoreLocation.framework */,
+				F23EBEC51BAEAD7800F61D85 /* CoreGraphics.framework */,
+				F23EBEC31BAEAD7000F61D85 /* CFNetwork.framework */,
+				F23EBEC11BAEAD6800F61D85 /* AudioToolbox.framework */,
 				F23EBE851BAEA6AC00F61D85 /* ChatApp */,
 				F23EBE9D1BAEA6AC00F61D85 /* ChatAppTests */,
 				F23EBEA81BAEA6AC00F61D85 /* ChatAppUITests */,
 				F23EBE841BAEA6AC00F61D85 /* Products */,
+				F23EBEDC1BAEAF2C00F61D85 /* ChatApp-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +149,8 @@
 		F23EBE851BAEA6AC00F61D85 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				F23EBEBD1BAEAD5200F61D85 /* Bolts.framework */,
+				F23EBEBE1BAEAD5200F61D85 /* Parse.framework */,
 				F23EBE861BAEA6AC00F61D85 /* AppDelegate.swift */,
 				F23EBE881BAEA6AC00F61D85 /* ViewController.swift */,
 				F23EBE8A1BAEA6AC00F61D85 /* Main.storyboard */,
@@ -106,6 +158,7 @@
 				F23EBE921BAEA6AC00F61D85 /* LaunchScreen.storyboard */,
 				F23EBE951BAEA6AC00F61D85 /* Info.plist */,
 				F23EBE8D1BAEA6AC00F61D85 /* ChatApp.xcdatamodeld */,
+				F23EBEB71BAEABC100F61D85 /* defaultimage.png */,
 			);
 			path = ChatApp;
 			sourceTree = "<group>";
@@ -190,6 +243,7 @@
 		F23EBE7B1BAEA6AC00F61D85 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Hardcoder;
 				TargetAttributes = {
@@ -234,6 +288,7 @@
 				F23EBE941BAEA6AC00F61D85 /* LaunchScreen.storyboard in Resources */,
 				F23EBE911BAEA6AC00F61D85 /* Assets.xcassets in Resources */,
 				F23EBE8C1BAEA6AC00F61D85 /* Main.storyboard in Resources */,
+				F23EBEB81BAEABC100F61D85 /* defaultimage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,10 +455,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ChatApp",
+				);
 				INFOPLIST_FILE = ChatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hardcoder.ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ChatApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -411,10 +473,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ChatApp",
+				);
 				INFOPLIST_FILE = ChatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hardcoder.ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ChatApp-Bridging-Header.h";
 			};
 			name = Release;
 		};
