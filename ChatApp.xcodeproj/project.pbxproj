@@ -28,6 +28,8 @@
 		F23EBED01BAEADA600F61D85 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23EBECF1BAEADA600F61D85 /* SystemConfiguration.framework */; };
 		F23EBED91BAEAEB700F61D85 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F23EBED81BAEAEB700F61D85 /* libz.1.dylib */; };
 		F23EBEDB1BAEAED000F61D85 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F23EBEDA1BAEAED000F61D85 /* libsqlite3.dylib */; };
+		F23EBEE01BAEB10E00F61D85 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EBEDF1BAEB10E00F61D85 /* LoginVC.swift */; settings = {ASSET_TAGS = (); }; };
+		F23EBEE21BAEB15B00F61D85 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EBEE11BAEB15B00F61D85 /* SignUpVC.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		F23EBED81BAEAEB700F61D85 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		F23EBEDA1BAEAED000F61D85 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 		F23EBEDC1BAEAF2C00F61D85 /* ChatApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		F23EBEDF1BAEB10E00F61D85 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F23EBEE11BAEB15B00F61D85 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +158,10 @@
 				F23EBE861BAEA6AC00F61D85 /* AppDelegate.swift */,
 				F23EBE881BAEA6AC00F61D85 /* ViewController.swift */,
 				F23EBE8A1BAEA6AC00F61D85 /* Main.storyboard */,
-				F23EBE901BAEA6AC00F61D85 /* Assets.xcassets */,
+				F23EBEDF1BAEB10E00F61D85 /* LoginVC.swift */,
+				F23EBEE11BAEB15B00F61D85 /* SignUpVC.swift */,
 				F23EBE921BAEA6AC00F61D85 /* LaunchScreen.storyboard */,
+				F23EBE901BAEA6AC00F61D85 /* Assets.xcassets */,
 				F23EBE951BAEA6AC00F61D85 /* Info.plist */,
 				F23EBE8D1BAEA6AC00F61D85 /* ChatApp.xcdatamodeld */,
 				F23EBEB71BAEABC100F61D85 /* defaultimage.png */,
@@ -315,6 +321,8 @@
 			files = (
 				F23EBE8F1BAEA6AC00F61D85 /* ChatApp.xcdatamodeld in Sources */,
 				F23EBE891BAEA6AC00F61D85 /* ViewController.swift in Sources */,
+				F23EBEE01BAEB10E00F61D85 /* LoginVC.swift in Sources */,
+				F23EBEE21BAEB15B00F61D85 /* SignUpVC.swift in Sources */,
 				F23EBE871BAEA6AC00F61D85 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
