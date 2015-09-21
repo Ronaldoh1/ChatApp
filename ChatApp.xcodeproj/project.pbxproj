@@ -33,6 +33,7 @@
 		F23EBEE41BAF594D00F61D85 /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EBEE31BAF594D00F61D85 /* UsersVC.swift */; settings = {ASSET_TAGS = (); }; };
 		F23EBEE61BAF5C3400F61D85 /* UserCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EBEE51BAF5C3400F61D85 /* UserCustomCell.swift */; settings = {ASSET_TAGS = (); }; };
 		F23EBEE81BAFC5B700F61D85 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EBEE71BAFC5B700F61D85 /* User.swift */; settings = {ASSET_TAGS = (); }; };
+		F23EBEEA1BAFE0DC00F61D85 /* ConversationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EBEE91BAFE0DC00F61D85 /* ConversationVC.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		F23EBEE31BAF594D00F61D85 /* UsersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
 		F23EBEE51BAF5C3400F61D85 /* UserCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCustomCell.swift; sourceTree = "<group>"; };
 		F23EBEE71BAFC5B700F61D85 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F23EBEE91BAFE0DC00F61D85 /* ConversationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				F23EBEE31BAF594D00F61D85 /* UsersVC.swift */,
 				F23EBEE71BAFC5B700F61D85 /* User.swift */,
 				F23EBEDF1BAEB10E00F61D85 /* LoginVC.swift */,
+				F23EBEE91BAFE0DC00F61D85 /* ConversationVC.swift */,
 				F23EBEE11BAEB15B00F61D85 /* SignUpVC.swift */,
 				F23EBE921BAEA6AC00F61D85 /* LaunchScreen.storyboard */,
 				F23EBE901BAEA6AC00F61D85 /* Assets.xcassets */,
@@ -334,6 +337,7 @@
 				F23EBEE01BAEB10E00F61D85 /* LoginVC.swift in Sources */,
 				F23EBEE81BAFC5B700F61D85 /* User.swift in Sources */,
 				F23EBEE21BAEB15B00F61D85 /* SignUpVC.swift in Sources */,
+				F23EBEEA1BAFE0DC00F61D85 /* ConversationVC.swift in Sources */,
 				F23EBE871BAEA6AC00F61D85 /* AppDelegate.swift in Sources */,
 				F23EBEE41BAF594D00F61D85 /* UsersVC.swift in Sources */,
 			);

@@ -183,7 +183,14 @@ class UsersVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
         return cell
     }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
+        let cell:UserCustomCell = tableView.cellForRowAtIndexPath(indexPath) as! UserCustomCell
+
+        otherName = cell.userNameLabel.text!;
+        otherProfileName = cell.profileNameLabel.text!
+        self.performSegueWithIdentifier("toConversation", sender: self)
+    }
 
 
 
