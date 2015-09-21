@@ -118,6 +118,13 @@ class UsersVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
 
 
+
+    @IBAction func logOutButtonTapped(sender: AnyObject) {
+
+        PFUser.logOut()
+
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
     override func viewWillAppear(animated: Bool) {
         self.navigationItem.hidesBackButton = true
     }

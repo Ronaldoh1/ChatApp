@@ -29,6 +29,9 @@ class LoginVC: UIViewController {
         self.signUpButton.center = CGPointMake(theWidth/2, theHeight-30)
 
     }
+    override func viewWillAppear(animated: Bool) {
+        self.navigationItem.hidesBackButton = true
+    }
 
     @IBAction func onLogInButtonTapped(sender: UIButton) {
 
