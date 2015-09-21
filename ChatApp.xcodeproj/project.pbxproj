@@ -30,6 +30,9 @@
 		F23EBEDB1BAEAED000F61D85 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F23EBEDA1BAEAED000F61D85 /* libsqlite3.dylib */; };
 		F23EBEE01BAEB10E00F61D85 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EBEDF1BAEB10E00F61D85 /* LoginVC.swift */; settings = {ASSET_TAGS = (); }; };
 		F23EBEE21BAEB15B00F61D85 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EBEE11BAEB15B00F61D85 /* SignUpVC.swift */; settings = {ASSET_TAGS = (); }; };
+		F23EBEE41BAF594D00F61D85 /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EBEE31BAF594D00F61D85 /* UsersVC.swift */; settings = {ASSET_TAGS = (); }; };
+		F23EBEE61BAF5C3400F61D85 /* UserCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EBEE51BAF5C3400F61D85 /* UserCustomCell.swift */; settings = {ASSET_TAGS = (); }; };
+		F23EBEE81BAFC5B700F61D85 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EBEE71BAFC5B700F61D85 /* User.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,9 @@
 		F23EBEDC1BAEAF2C00F61D85 /* ChatApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		F23EBEDF1BAEB10E00F61D85 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F23EBEE11BAEB15B00F61D85 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		F23EBEE31BAF594D00F61D85 /* UsersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
+		F23EBEE51BAF5C3400F61D85 /* UserCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCustomCell.swift; sourceTree = "<group>"; };
+		F23EBEE71BAFC5B700F61D85 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,9 @@
 				F23EBE861BAEA6AC00F61D85 /* AppDelegate.swift */,
 				F23EBE881BAEA6AC00F61D85 /* ViewController.swift */,
 				F23EBE8A1BAEA6AC00F61D85 /* Main.storyboard */,
+				F23EBEE51BAF5C3400F61D85 /* UserCustomCell.swift */,
+				F23EBEE31BAF594D00F61D85 /* UsersVC.swift */,
+				F23EBEE71BAFC5B700F61D85 /* User.swift */,
 				F23EBEDF1BAEB10E00F61D85 /* LoginVC.swift */,
 				F23EBEE11BAEB15B00F61D85 /* SignUpVC.swift */,
 				F23EBE921BAEA6AC00F61D85 /* LaunchScreen.storyboard */,
@@ -321,9 +330,12 @@
 			files = (
 				F23EBE8F1BAEA6AC00F61D85 /* ChatApp.xcdatamodeld in Sources */,
 				F23EBE891BAEA6AC00F61D85 /* ViewController.swift in Sources */,
+				F23EBEE61BAF5C3400F61D85 /* UserCustomCell.swift in Sources */,
 				F23EBEE01BAEB10E00F61D85 /* LoginVC.swift in Sources */,
+				F23EBEE81BAFC5B700F61D85 /* User.swift in Sources */,
 				F23EBEE21BAEB15B00F61D85 /* SignUpVC.swift in Sources */,
 				F23EBE871BAEA6AC00F61D85 /* AppDelegate.swift in Sources */,
+				F23EBEE41BAF594D00F61D85 /* UsersVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

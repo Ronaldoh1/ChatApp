@@ -111,7 +111,7 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     @IBAction func signUpButtonTapped(sender: UIButton) {
 
 
-        var user = PFUser()
+        let user = PFUser()
         user.username = self.emailTextField.text;
         user.password = self.passwordTextField.text;
         user.email = self.emailTextField.text;
@@ -129,6 +129,7 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
             if signUpError == nil {
                 
                 print("you got it!")
+                  self.performSegueWithIdentifier("goToUsersVC2", sender: self)
                 }else {
 
                 print("can't sign up")

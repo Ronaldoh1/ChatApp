@@ -33,6 +33,17 @@ class LoginVC: UIViewController {
     @IBAction func onLogInButtonTapped(sender: UIButton) {
 
 
+        PFUser.logInWithUsernameInBackground(self.usernameTextField.text!
+            , password:self.passwordTextField.text!) {
+            (user: PFUser?, error: NSError?) -> Void in
+            if user != nil {
+                // Do stuff after successful login.
+                print("you are innnn")
+                self.performSegueWithIdentifier("goToUsersVC", sender: self)
+            } else {
+                // The login failed. Check error to see why.
+            }
+        }
 
     }
     
