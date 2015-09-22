@@ -32,6 +32,9 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
 
     var messageX:CGFloat = 37.0
     var messageY:CGFloat = 26.0
+    var frameX:CGFloat = 32.0
+    var frameY:CGFloat = 21
+
     var messageArray = [String]()
     var senderArray = [String]()
 
@@ -79,6 +82,11 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
 
         self.messageX = 37.0
         self.messageY = 26.0
+        self.frameX = 32.0
+        self.frameY = 21.0
+
+
+
 
 
         //EMPTY OUR ARRAYS.
@@ -135,6 +143,17 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
                         self.messageY += messageLabel.frame.size.height + 30
                         self.resultsScrollView.contentSize = CGSizeMake(theWidth, self.messageY)
 
+                        let frameLabel:UILabel = UILabel()
+                        frameLabel.frame.size  = CGSizeMake(messageLabel.frame.size.width+10, messageLabel.frame.size.height+10)
+
+                        frameLabel.frame.origin.x = (self.resultsScrollView.frame.size.width - self.frameX) - frameLabel.frame.size.width
+                        frameLabel.frame.origin.y = self.frameY
+                        frameLabel.backgroundColor = UIColor.orangeColor()
+                        frameLabel.layer.masksToBounds = true
+                        frameLabel.layer.cornerRadius = 10
+                        self.resultsScrollView.addSubview(frameLabel)
+                        self.frameY += frameLabel.frame.size.height + 20
+
                     }else{
 
                         let messageLabel:UILabel = UILabel()
@@ -153,6 +172,17 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
                         messageLabel.frame.origin.y = self.messageY
                         self.resultsScrollView.addSubview(messageLabel)
                         self.messageY += messageLabel.frame.size.height + 30
+
+                        let frameLabel:UILabel = UILabel()
+                        frameLabel.frame  = CGRectMake(self.frameX, self.frameY, messageLabel.frame.size.width + 10, messageLabel.frame.size.height + 10)
+//                        frameLabel.frame.origin.x = (self.resultsScrollView.frame.size.width - self.frameX) - frameLabel.frame.size.width
+//                        frameLabel.frame.origin.y = self.frameY
+                        frameLabel.backgroundColor = UIColor.groupTableViewBackgroundColor()
+                        frameLabel.layer.masksToBounds = true
+                        frameLabel.layer.cornerRadius = 10
+                        self.resultsScrollView.addSubview(frameLabel)
+                        self.frameY += frameLabel.frame.size.height + 20
+
                         self.resultsScrollView.contentSize = CGSizeMake(theWidth, self.messageY)
                     }
                 }
