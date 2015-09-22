@@ -210,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8lK-cu-1te" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1152" y="492"/>
+            <point key="canvasLocation" x="1080" y="415"/>
         </scene>
         <!--ConversationVC-->
         <scene sceneID="Ian-Ls-0dT">
@@ -220,8 +220,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" id="bgf-WP-lzJ">
+                                <rect key="frame" x="0.0" y="429" width="320" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, " textAlignment="natural" id="WCV-Bk-7G5">
+                                        <rect key="frame" x="8" y="8" width="240" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="G82-gn-4je">
+                                        <rect key="frame" x="256" y="13" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="49v-WP-sc2">
+                                <rect key="frame" x="0.0" y="429" width="320" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="N0W-WO-OFn">
-                                <rect key="frame" x="0.0" y="30" width="320" height="450"/>
+                                <rect key="frame" x="0.0" y="26" width="320" height="403"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
                         </subviews>
@@ -229,12 +255,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="1Uj-kc-IvT"/>
                     <connections>
+                        <outlet property="frameMessageView" destination="bgf-WP-lzJ" id="VXR-9H-liR"/>
+                        <outlet property="lineLabel" destination="49v-WP-sc2" id="EHw-5y-Y2E"/>
+                        <outlet property="messageTextView" destination="WCV-Bk-7G5" id="vgY-QM-Swh"/>
                         <outlet property="resultsScrollView" destination="N0W-WO-OFn" id="2Ca-rC-D6g"/>
+                        <outlet property="sendButton" destination="G82-gn-4je" id="OGe-7Y-Bxe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgX-ev-UI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="212"/>
+            <point key="canvasLocation" x="1574" y="406"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4BX-y7-e0j">

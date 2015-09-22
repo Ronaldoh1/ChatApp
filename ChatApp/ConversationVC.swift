@@ -14,7 +14,6 @@ var otherProfileName = ""
 
 class ConversationVC: UIViewController, UIScrollViewDelegate{
 
-    @IBOutlet weak var tableView: UITableView!
 
     //create 3 arrays.
     var resultsUsernameArray = [String]()
@@ -40,21 +39,23 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
 
         self.resultsScrollView.frame = CGRectMake(0, 64, theWidth, theHeight - 114)
         self.resultsScrollView.layer.zPosition = 20
-        //self.frameMessageView.frame = CGRectMake(0, self.resultsScrollView.frame.maxY, theWidth, 50)
-        //self.lineLabel.frame = CGRectMake(0, 0, theWidth, 1)
-        //self.messageTextView.frame = CGRectMake(2, 1, self.frameMessageView.frame.size.width-32, 48)
+        self.frameMessageView.frame = CGRectMake(0, self.resultsScrollView.frame.maxY, theWidth, 50)
+        self.lineLabel.frame = CGRectMake(0, 0, theWidth, 1)
+        self.messageTextView.frame = CGRectMake(2, 1, self.frameMessageView.frame.size.width-32, 48)
 
-        //self.sendButton.center = CGPointMake(self.frameMessageView.frame.size.width-30, 24)
+        self.sendButton.center = CGPointMake(self.frameMessageView.frame.size.width-30, 24)
 
         self.scrollViewOriginalY = self.resultsScrollView.frame.origin.y
-        //self.frameMessageOriginalY = self.frameMessageView.frame.origin.y
+        self.frameMessageOriginalY = self.frameMessageView.frame.origin.y
 
         self.title = otherProfileName
 
-//        self.messageLabel.text = "Please enter a message"
-//        self.messageLabel.backgroundColor = UIColor.clearColor()
-//        self.messageLabel.textColor = UIColor.lightGrayColor()
-//        self.messageTextView.addSubview(self.messageLabel)
+        self.messageLabel.text = "Please enter a message"
+        self.messageLabel.backgroundColor = UIColor.clearColor()
+        self.messageLabel.textColor = UIColor.lightGrayColor()
+        self.messageTextView.addSubview(self.messageLabel)
+
+
     }
  
 
