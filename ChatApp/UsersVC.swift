@@ -36,6 +36,10 @@ class UsersVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
         //download contacts
 
         self.downloadContacts()
+
+         // self.performSegueWithIdentifier("toConversation", sender: self)
+
+
         
     }
 
@@ -116,7 +120,13 @@ class UsersVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
         
     }
 
+    override func viewDidDisappear(animated: Bool) {
+        resultsUsernameArray.removeAll(keepCapacity: false)
 
+        resultsProfileNameArray.removeAll(keepCapacity: false)
+
+        resultsImageFilesArray.removeAll(keepCapacity: false)
+    }
 
 
     @IBAction func logOutButtonTapped(sender: AnyObject) {
@@ -187,6 +197,7 @@ class UsersVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
         let cell:UserCustomCell = tableView.cellForRowAtIndexPath(indexPath) as! UserCustomCell
 
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         otherName = cell.userNameLabel.text!;
         otherProfileName = cell.profileNameLabel.text!
         self.performSegueWithIdentifier("toConversation", sender: self)
