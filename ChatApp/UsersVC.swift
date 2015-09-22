@@ -45,6 +45,13 @@ class UsersVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidAppear(animated: Bool) {
 
+        resultsUsernameArray.removeAll(keepCapacity: false)
+
+        resultsProfileNameArray.removeAll(keepCapacity: false)
+
+        resultsImageFilesArray.removeAll(keepCapacity: false)
+
+      //  let predicate = NSPredicate(format: "username != '"+userName+"'")
             
         }
 //
