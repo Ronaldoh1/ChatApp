@@ -27,13 +27,25 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var frameMessageView: UIView!
 
+    var myImage:UIImage = UIImage()
+    var otherImage:UIImage = UIImage()
+
+    //need two arrays to hold ImageFiles
+
+    var resultsImageFiles = [PFFile]()
+    var resultsImageFiles2 = [PFFile]()
+
+
     var scrollViewOriginalY:CGFloat = 0
     var frameMessageOriginalY:CGFloat = 0
 
     var messageX:CGFloat = 37.0
     var messageY:CGFloat = 26.0
     var frameX:CGFloat = 32.0
-    var frameY:CGFloat = 21
+    var frameY:CGFloat = 21.0
+
+    var imgX:CGFloat = 3.0
+    var imgY:CGFloat = 3.0
 
     var messageArray = [String]()
     var senderArray = [String]()
@@ -68,9 +80,75 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
         self.messageTextView.addSubview(self.messageLabel)
 
         //download messages
-        self.refreshResults()
+       // self.refreshResults()
 
 
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        let query = PFQuery(className: "_User")
+
+        query.whereKey("username", equalTo: (PFUser.currentUser()?.username)!)
+        query.findObjectsInBackgroundWithBlock({ (results, error) -> Void in
+
+            if error == nil {
+
+                self.resultsImageFiles.removeAll(keepCapacity: false)
+
+                for object in results! {
+
+
+                self.resultsImageFiles.append(object["photo"] as! PFFile)
+
+
+
+                self.resultsImageFiles[0].getDataInBackgroundWithBlock({ (imageData, error) -> Void in
+
+                        if error == nil {
+                            self.myImage = UIImage(data: imageData!)!
+
+                            let query2 = PFQuery(className: "_User")
+                            query2.whereKey("username", equalTo: otherName)
+
+
+
+                            query2.findObjectsInBackgroundWithBlock({ (results2, error) -> Void in
+
+                                if error == nil {
+                                    self.resultsImageFiles.removeAll(keepCapacity: false)
+
+                                    for object in results2! {
+
+                                        self.resultsImageFiles2.append(object["photo"] as! PFFile)
+
+                                        self.resultsImageFiles2[0].getDataInBackgroundWithBlock({ (imageData2, error) -> Void in
+
+                                            if error == nil {
+
+                                                self.otherImage = UIImage(data: imageData2!)!
+
+                                                self.refreshResults()
+
+                                            }
+
+
+                                        })
+
+                                    }
+                                    
+                                }
+                            })
+
+
+                        }
+                    })
+
+
+                }
+
+
+            }
+        })
     }
 
     //function to download messages
@@ -84,6 +162,9 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
         self.messageY = 26.0
         self.frameX = 32.0
         self.frameY = 21.0
+
+        self.imgX = 3.0
+        self.imgY = 3.0
 
 
 
@@ -122,6 +203,10 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
                     
                 }
 
+                for subView in self.resultsScrollView.subviews{
+                     self.resultsScrollView.willRemoveSubview(subView)
+                }
+
                 for  var i = 0; i <= self.messageArray.count - 1; i++ {
 
                     if self.senderArray[i] == PFUser.currentUser()?.username {
@@ -154,6 +239,23 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
                         self.resultsScrollView.addSubview(frameLabel)
                         self.frameY += frameLabel.frame.size.height + 20
 
+
+                        let img:UIImageView = UIImageView()
+
+                        img.image = self.myImage
+                        img.frame.size = CGSizeMake(34, 34)
+                        img.frame.origin.x = (self.resultsScrollView.frame.size.width - self.imgX) - img.frame.size.width
+                        img.frame.origin.y = self.imgY
+                        img.layer.zPosition = 30
+                        img.layer.cornerRadius = img.frame.size.width/2
+                        img.clipsToBounds = true
+                        self.resultsScrollView.addSubview(img)
+                        
+                        self.imgY += frameLabel.frame.size.height + 20
+
+                        self.resultsScrollView.contentSize = CGSizeMake(theWidth, self.messageY)
+
+
                     }else{
 
                         let messageLabel:UILabel = UILabel()
@@ -183,8 +285,23 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
                         self.resultsScrollView.addSubview(frameLabel)
                         self.frameY += frameLabel.frame.size.height + 20
 
+
+                        let img:UIImageView = UIImageView()
+
+                        img.image = self.otherImage
+                        img.frame = CGRectMake(self.imgX, self.imgY, 34, 34)
+                        img.layer.zPosition = 30
+                        img.layer.cornerRadius = img.frame.size.width/2
+                        img.clipsToBounds = true
+                        self.resultsScrollView.addSubview(img)
+
+                        self.imgY += frameLabel.frame.size.height + 20
+
                         self.resultsScrollView.contentSize = CGSizeMake(theWidth, self.messageY)
                     }
+
+                    let bottomOffSet:CGPoint = CGPointMake(0, self.resultsScrollView.contentSize.height - self.resultsScrollView.bounds.size.height)
+                    self.resultsScrollView.setContentOffset(bottomOffSet, animated: false)
                 }
             }else {
                 print(error)
@@ -198,7 +315,7 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
 
     @IBAction func onSendButtonTapped(sender: UIButton) {
 
-        
+
     }
 
 }
