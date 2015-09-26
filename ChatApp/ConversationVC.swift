@@ -12,7 +12,7 @@ import Parse
 var otherName = ""
 var otherProfileName = ""
 
-class ConversationVC: UIViewController, UIScrollViewDelegate{
+class ConversationVC: UIViewController, UIScrollViewDelegate, UITextViewDelegate{
 
 
     //create 3 arrays.
@@ -81,6 +81,12 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
 
         //download messages
        // self.refreshResults()
+
+        //Need to add two Observers
+        //send notification to the fuction
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWasShown", name: UIKeyboardDidShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide", name: UIKeyboardWillHideNotification, object: nil)
 
 
     }
