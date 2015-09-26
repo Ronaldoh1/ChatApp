@@ -490,7 +490,7 @@
 				);
 				INFOPLIST_FILE = ChatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Hardcoder.ChatApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ChatApp.ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ChatApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -508,7 +508,7 @@
 				);
 				INFOPLIST_FILE = ChatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Hardcoder.ChatApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ChatApp.ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ChatApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

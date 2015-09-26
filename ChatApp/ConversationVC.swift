@@ -405,10 +405,35 @@ class ConversationVC: UIViewController, UIScrollViewDelegate, UITextViewDelegate
             message.saveInBackgroundWithBlock{
                 (success: Bool, error: NSError?) -> Void in
                 if (success) {
+
+
+                    
+                    let uQuery:PFQuery = PFUser.query()!
+                    uQuery.whereKey("username", equalTo: otherName)
+
+                    let pushQuery:PFQuery = PFInstallation.query()!
+                    pushQuery.whereKey("user", matchesQuery: uQuery)
+
+                    let push:PFPush = PFPush()
+                    push.setQuery(pushQuery)
+                    push.setMessage("New Message")
+                    //push.sendPush(nil)
+
+                    do {
+                        try push.sendPush()
+
+                    } catch {
+
+                    }
+
+
+
+
                     print("message sent")
                     self.messageTextView.text = ""
                     self.messageLabel.hidden = false
                     self.refreshResults()
+
 
                 } else {
 

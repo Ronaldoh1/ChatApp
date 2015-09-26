@@ -158,7 +158,7 @@
                                         <rect key="frame" x="0.0" y="92" width="320" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Re0-be-fLg" id="kbM-M6-xzr">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="120.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultimage.png" id="tAZ-fs-UFW">
@@ -210,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8lK-cu-1te" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080" y="415"/>
+            <point key="canvasLocation" x="1079" y="424"/>
         </scene>
         <!--ConversationVC-->
         <scene sceneID="Ian-Ls-0dT">
@@ -235,9 +235,9 @@
                                         </connections>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="G82-gn-4je">
-                                        <rect key="frame" x="256" y="13" width="46" height="30"/>
+                                        <rect key="frame" x="261" y="13" width="36" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Send"/>
                                         <connections>
                                             <action selector="onSendButtonTapped:" destination="d6l-pc-4sl" eventType="touchUpInside" id="U5u-eI-9Kf"/>
                                         </connections>
@@ -271,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgX-ev-UI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1574" y="406"/>
+            <point key="canvasLocation" x="1573" y="410"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4BX-y7-e0j">
