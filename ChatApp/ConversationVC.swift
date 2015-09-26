@@ -53,6 +53,7 @@ class ConversationVC: UIViewController, UIScrollViewDelegate, UITextViewDelegate
 
 
     let messageLabel = UILabel(frame: CGRect(x: 5, y: 8, width: 200, height: 20))
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -85,10 +86,12 @@ class ConversationVC: UIViewController, UIScrollViewDelegate, UITextViewDelegate
         //Need to add two Observers
         //send notification to the fuction
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWasShown", name: UIKeyboardDidShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWasShown:", name: UIKeyboardDidShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
 
-
+        let tapGesture = UITapGestureRecognizer(target: self, action: "didTapScrollView")
+        tapGesture.numberOfTapsRequired = 1
+        self.resultsScrollView.addGestureRecognizer(tapGesture)
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -154,6 +157,76 @@ class ConversationVC: UIViewController, UIScrollViewDelegate, UITextViewDelegate
 
 
             }
+        })
+    }
+
+    //helper method se
+    func didTapScrollView(){
+
+        self.view.endEditing(true)
+
+    }
+
+    //Delegate Methods
+
+    func textViewDidChange(textView: UITextView) {
+        if !messageTextView.hasText(){
+            self.messageLabel.hidden = false
+        }else {
+            self.messageLabel.hidden = true
+        }
+    }
+
+    func textViewDidEndEditing(textView: UITextView) {
+        if !messageTextView.hasText(){
+            self.messageLabel.hidden = true
+        }
+    }
+
+    //helper function to move the scrollview based on the height of the keyboard.
+    func keyboardWasShown(notification:NSNotification){
+
+        let dict:NSDictionary = notification.userInfo! as NSDictionary
+
+        let s:NSValue = dict.valueForKey(UIKeyboardFrameEndUserInfoKey) as! NSValue
+
+        let rect:CGRect = s.CGRectValue()
+
+        UIView.animateWithDuration(0.3, delay: 0, options: .CurveLinear, animations: {
+
+            self.resultsScrollView.frame.origin.y = self.scrollViewOriginalY - rect.height
+            self.frameMessageView.frame.origin.y = self.frameMessageOriginalY - rect.height
+
+            let bottomOffSet:CGPoint = CGPointMake(0, self.resultsScrollView.contentSize.height - self.resultsScrollView.bounds.size.height)
+            self.resultsScrollView.setContentOffset(bottomOffSet, animated: false)
+
+            }, completion: {
+                (finished:Bool) in
+
+
+        })
+    }
+
+    func keyboardWillHide(notification:NSNotification){
+
+
+        let dict:NSDictionary = notification.userInfo!
+
+        let s:NSValue = dict.valueForKey(UIKeyboardFrameEndUserInfoKey) as! NSValue
+
+        let rect:CGRect = s.CGRectValue()
+
+        UIView.animateWithDuration(0.3, delay: 0, options: .CurveLinear, animations: {
+
+            self.resultsScrollView.frame.origin.y = self.scrollViewOriginalY
+            self.frameMessageView.frame.origin.y = self.frameMessageOriginalY
+            let bottomOffSet:CGPoint = CGPointMake(0, self.resultsScrollView.contentSize.height - self.resultsScrollView.bounds.size.height)
+            self.resultsScrollView.setContentOffset(bottomOffSet, animated: false)
+
+            }, completion: {
+                (finished:Bool) in
+                
+                
         })
     }
 
@@ -321,6 +394,27 @@ class ConversationVC: UIViewController, UIScrollViewDelegate, UITextViewDelegate
 
     @IBAction func onSendButtonTapped(sender: UIButton) {
 
+        if messageTextView.text == "" {
+
+            print("please enter some text")
+        }else {
+            let message = PFObject(className: "Message")
+            message["sender"] = PFUser.currentUser()?.username
+            message["other"] = otherName
+            message["message"] = self.messageTextView.text
+            message.saveInBackgroundWithBlock{
+                (success: Bool, error: NSError?) -> Void in
+                if (success) {
+                    print("message sent")
+                    self.messageTextView.text = ""
+                    self.messageLabel.hidden = false
+                    self.refreshResults()
+
+                } else {
+
+                }
+            }
+        }
 
     }
 
